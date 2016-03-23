@@ -1,7 +1,7 @@
 <?php
   namespace App\Controller;
 
-  class Pilot {
+  class User {
     public function foo()
     {
       

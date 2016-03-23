@@ -13,11 +13,11 @@
         $controller->index();
       });
 
-      $router->map('GET', '/car', function() {
+      $router->map('GET', '/account', function() {
 
       });
 
-      $router->map('GET', '/pilot', function() {
+      $router->map('GET', '/user', function() {
 
       });
 

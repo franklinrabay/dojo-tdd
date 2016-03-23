@@ -1,7 +1,7 @@
 <?php
   namespace App\Controller;
 
-  class Car {
+  class Account {
     public function foo()
     {
       
