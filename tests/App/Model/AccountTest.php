@@ -8,9 +8,23 @@ include(__DIR__."/../../../vendor/autoload.php");
 
 class AccountTest extends \PHPUnit_Framework_TestCase
 {
-    public function testFoo()
+    /**
+    * O saldo da conta não pode ser negativo;
+    * Deve-se permitir Sacar;
+    * Deve-se permitir Depositar;
+    * Deve-se permitir Transferir valores;
+    */
+    protected function setUp()
     {
-        $account = new \App\Model\Account(1);    
-        $this->assertEquals("bar", $account->foo());
+        $this->user = new \App\Model\User("John Doe");
+        
+        $this->account = new \App\Model\Account(1, $this->user);
+        $this->account->balance = 100;
     }
+
+    public function testFoo()
+    {   
+        $this->assertEquals("bar", $this->account->foo());
+    }
+
 }
