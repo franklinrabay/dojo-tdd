@@ -1,9 +1,9 @@
 <?php
   namespace App\Model;
 
-  class Car {
+  class Account {
     public function foo()
     {
-      echo "bar";
+      return "bar";
     }
   } 

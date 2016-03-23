@@ -1,7 +1,7 @@
 <?php
   namespace App\Model;
 
-  class Pilot {
+  class User {
     public function foo()
     {
       echo "bar";

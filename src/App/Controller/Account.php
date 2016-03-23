@@ -4,6 +4,6 @@
   class Account {
     public function foo()
     {
-      
+      return "bar";
     }
   } 
