@@ -20,4 +20,21 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $this->mainAccount = new \App\Model\Account(1, $this->user);
         $this->subAccount  = new \App\Model\Account(2, $this->user);
     }
+
+    public function testNameIsNotEmpty()
+    {
+        $this->assertNotEmpty($this->user->name);
+    }
+
+    public function testeAccountsCount()
+    {
+        $count = count($this->user->accounts);
+        $this->assertEquals(2, $count);
+    }
+
+    public function testTrasnferOwner()
+    {
+        $newUser = new \App\Model\User("Bob Marley");
+        $this->subAccount->transferOwner($newUser);
+    }
 }
